@@ -6,7 +6,7 @@
       <div class="col-sm-8 col-lg-4">
         <h2 class="mt-3 mt-sm-0 mb-0">Name: {{poke.name}}</h2>
         <h4 class="mt-0">Number: {{poke.num}}</h4>
-        <p>Type: {{poke.type[0]}}</p>
+        <p>Type:{{poke.type[0]}}<span *ngIf="poke.type[1]">, {{poke.type[1]}}</span></p>
         <p>height: {{poke.height}}</p>
         <p>weight: {{poke.weight}}</p>
       </div>
