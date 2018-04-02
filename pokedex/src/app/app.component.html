@@ -5,19 +5,16 @@
   <h3 class="mb-0">Pokemon Search</h3>
   <div class="form-group">
     <div class="form-label"></div>
-    <input class="form-control mt-2" type="text">
+    <input class="form-control mt-2" type="text"
+      [(ngModel)]="query">
   </div><!-- form-group -->
 
   <div class="justify-content-center">  
     <a href="#" class="card pokemon-card"
       *ngFor="let poke of pokemon"
       (click)="showPokemon(poke)">
-        <div class="media">
-          <img src="{{ poke.img }}">
-          <div class="media-body align-self-center">
-            <h5 class="m-0">{{ poke.name }}</h5>
-          </div><!-- media body -->
-        </div><!-- media -->
+      <app-pokemon-card [poke]="poke"></app-pokemon-card>
+        
     </a><!-- link -->
   </div><!-- container -->
 
