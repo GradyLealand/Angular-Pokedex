@@ -10,17 +10,19 @@ export class AppComponent implements OnInit{
   title = 'app';
   query: string;
   pokemon: object;
+  currentPokemon: object;
 
   showPokemon(item)
   {
-    this.query = item.pokemon.name;
-    item.highlight = !item.highlight;
+    this.query = "";
+    this.currentPokemon = item;
   }
 
   constructor (private http: HttpClient)
   {
     this.query = '';
     this.pokemon = [];
+
 
     console.log(this.pokemon)
   }

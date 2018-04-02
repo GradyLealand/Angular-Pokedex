@@ -9,15 +9,17 @@
       [(ngModel)]="query">
   </div><!-- form-group -->
 
+  <app-pokemon-details *ngIf="currentPokemon"
+  [poke]="currentPokemon"></app-pokemon-details>
+  
   <div class="justify-content-center">  
     <a href="#" class="card pokemon-card"
-      *ngFor="let poke of pokemon"
+      *ngFor="let poke of (pokemon | searchPokemon: query)"
       (click)="showPokemon(poke)">
       <app-pokemon-card [poke]="poke"></app-pokemon-card>
-        
     </a><!-- link -->
   </div><!-- container -->
-
+  
 </div><!-- row -->
 
 
