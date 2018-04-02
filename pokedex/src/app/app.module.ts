@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { SearchPokemonPipe } from './search-pokemon.pipe';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
+import { AboutTableComponent } from './about-table/about-table.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.compo
     AppComponent,
     PokemonCardComponent,
     SearchPokemonPipe,
-    PokemonDetailsComponent
+    PokemonDetailsComponent,
+    AboutTableComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule

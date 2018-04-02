@@ -1,7 +1,14 @@
 <nav class="navbar pokemon-red">
-  <a class="navbar-brand" href="#">POKEDEX</a>
+  <a class="navbar-brand" href="#"
+  (click)="openApp()">POKEDEX</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#"
+      (click)="openAbout()">About</a>
+    </li>
+  </ul>
 </nav>
-<div class="container">
+<div class="container" *ngIf="about === false">
   <h3 class="mb-0">Pokemon Search</h3>
   <div class="form-group">
     <div class="form-label"></div>
@@ -19,9 +26,11 @@
       (click)="showPokemon(poke)">
       <app-pokemon-card [poke]="poke"></app-pokemon-card>
     </a><!-- link -->
-  </div><!-- container -->
-  
+  </div><!-- container -->  
 </div><!-- row -->
+<div id="about-table" *ngIf="about">
+  <p>this is about</p>
+</div>
 
 
 
