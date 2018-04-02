@@ -8,22 +8,18 @@
     <input class="form-control mt-2" type="text">
   </div><!-- form-group -->
 
-  <div class="position-absolute container" style="left: 0; z-index:10">
-      <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
-          <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start"
-              *ngFor="let poke of pokemon">
-                <div class="media">
-                  <div class="media-body align-self-center">
-                    <h5 class="m-0">{{ poke.name }}</h5>
-                  </div><!-- media body -->
-                </div><!-- media -->
-            </a><!-- link -->
-          </div><!-- list-group -->
-        </div><!-- col -->
-      </div><!-- row -->
-    </div><!-- container -->
+  <div class="justify-content-center">  
+    <a href="#" class="card pokemon-card"
+      *ngFor="let poke of pokemon"
+      (click)="showPokemon(poke)">
+        <div class="media">
+          <img src="{{ poke.img }}">
+          <div class="media-body align-self-center">
+            <h5 class="m-0">{{ poke.name }}</h5>
+          </div><!-- media body -->
+        </div><!-- media -->
+    </a><!-- link -->
+  </div><!-- container -->
 
 </div><!-- row -->
 

@@ -2,3 +2,10 @@
 {
     background-color: red;
 }
+
+.pokemon-card
+{
+    float: left;
+    height: 200px;
+    width: 250px;
+}
