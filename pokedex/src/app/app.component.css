@@ -8,4 +8,10 @@
     float: left;
     height: 200px;
     width: 250px;
+    margin: 5px;
+}
+
+.detail-card
+{
+    width: 600px;
 }

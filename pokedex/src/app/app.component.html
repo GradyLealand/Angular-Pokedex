@@ -6,12 +6,13 @@
   <div class="form-group">
     <div class="form-label"></div>
     <input class="form-control mt-2" type="text"
+      (click)="clearSearch()"
       [(ngModel)]="query">
   </div><!-- form-group -->
 
   <app-pokemon-details *ngIf="currentPokemon"
   [poke]="currentPokemon"></app-pokemon-details>
-  
+
   <div class="justify-content-center">  
     <a href="#" class="card pokemon-card"
       *ngFor="let poke of (pokemon | searchPokemon: query)"

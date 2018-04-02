@@ -14,8 +14,13 @@ export class AppComponent implements OnInit{
 
   showPokemon(item)
   {
-    this.query = "";
     this.currentPokemon = item;
+  }
+
+  clearSearch()
+  {
+    this.query = "";
+    this.currentPokemon = null;
   }
 
   constructor (private http: HttpClient)
