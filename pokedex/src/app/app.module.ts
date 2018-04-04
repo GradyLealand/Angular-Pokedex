@@ -9,6 +9,10 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { SearchPokemonPipe } from './search-pokemon.pipe';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 import { AboutTableComponent } from './about-table/about-table.component';
+import { AboutProjectComponent } from './about-project/about-project.component';
+import { AboutResourcesComponent } from './about-resources/about-resources.component';
+import { AboutLearningComponent } from './about-learning/about-learning.component';
+import { AboutCodeComponent } from './about-code/about-code.component';
 
 
 @NgModule({
@@ -17,7 +21,11 @@ import { AboutTableComponent } from './about-table/about-table.component';
     PokemonCardComponent,
     SearchPokemonPipe,
     PokemonDetailsComponent,
-    AboutTableComponent
+    AboutTableComponent,
+    AboutProjectComponent,
+    AboutResourcesComponent,
+    AboutLearningComponent,
+    AboutCodeComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule
