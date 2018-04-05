@@ -1,27 +1,28 @@
-<div *ngIf = about>
-  <h3>Gap Analysis - Angula web applications</h3>
-  <h4>Table Of Contents</h4>
+
+<div *ngIf = about class="about-panel">
+  <h3 style="margin-bottom: 50px">Gap Analysis - Angular Web Framework</h3>
+  <h4>Table of Contents</h4>
   <ul>
     <li><a href="#" (click)= "openAboutProject()">About the Project</a></li>
     <li><a href="#" (click)= "openAboutResources()">Resources</a></li>
-    <li><a href="#" (click)= "openAboutProcess()">Learning Process</a></li>
+    <li><a href="#" (click)= "openAboutLearning()">Learning Process</a></li>
     <li><a href="#" (click)= "openAboutCode()">Sample Code</a></li>
   </ul>
 </div>
 
 <div id="about-project" *ngIf="project">
-  <button (click)= "back()">Back</button>
+  <button (click)= "back()" style="float:right">Back</button>
   <app-about-project></app-about-project>
 </div>
-<div id="about-learning" *ngIf="learning">
-    <button (click)= "back()">Back</button>
-  <app-about-learning></app-about-learning>
-</div>
 <div id="about-resources" *ngIf="resources">
-    <button (click)= "back()">Back</button>
+  <button (click)= "back()" style="float:right">Back</button>
   <app-about-resources></app-about-resources>
 </div>
+<div id="about-learning" *ngIf="learning">
+    <button (click)= "back()" style="float:right">Back</button>
+    <app-about-learning></app-about-learning>
+  </div>
 <div id="about-code" *ngIf="code">
-    <button (click)= "back()">Back</button>
+  <button (click)= "back()" style="float:right">Back</button>
   <app-about-code></app-about-code>
 </div>

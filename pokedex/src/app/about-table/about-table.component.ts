@@ -3,14 +3,15 @@ import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-about-table',
-  templateUrl: './about-table.component.html'
+  templateUrl: './about-table.component.html',
+  styleUrls: ['../app.component.css']
 })
 export class AboutTableComponent implements OnInit {
 
   about: boolean;
   project: boolean;
   resources: boolean;
-  process: boolean;
+  learning: boolean;
   code: boolean;
 
   openAboutProject()
@@ -18,8 +19,35 @@ export class AboutTableComponent implements OnInit {
     this.about = false;
     this.project = true;
     this.resources = false;
-    this.process = false;
+    this.learning = false;
     this.code = false;
+  }
+
+  openAboutResources()
+  {
+    this.about = false;
+    this.project = false;
+    this.resources = true;
+    this.learning = false;
+    this.code = false;
+  }
+
+  openAboutLearning()
+  {
+    this.about = false;
+    this.project = false;
+    this.resources = false;
+    this.learning = true;
+    this.code = false;
+  }
+
+  openAboutCode()
+  {
+    this.about = false;
+    this.project = false;
+    this.resources = false;
+    this.learning = false;
+    this.code = true;
   }
 
   back()
@@ -27,17 +55,16 @@ export class AboutTableComponent implements OnInit {
     this.about = true;
     this.project = false;
     this.resources = false;
-    this.process = false;
+    this.learning = false;
     this.code = false;
   }
 
-  
-
-  constructor() { 
+  constructor()
+  { 
     this.about = true;
     this.project = false;
     this.resources = false;
-    this.process = false;
+    this.learning = false;
     this.code = false;
   }
 

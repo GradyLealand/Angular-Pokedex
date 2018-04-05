@@ -1,6 +1,8 @@
 .pokemon-red
 {
     background-color: red;
+    border: 2px solid black;
+    margin-bottom: 5px;
 }
 
 .pokemon-card
@@ -13,5 +15,22 @@
 
 .detail-card
 {
-    width: 600px;
+    width: 500px;
+}
+
+.form-group
+{
+    width: 30%;
+}
+
+.navbar-brand, .nav-item
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.about-panel
+{
+    margin-top: 50px;
+    margin-left: 10%;
 }
